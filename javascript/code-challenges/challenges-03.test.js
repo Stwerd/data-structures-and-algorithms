@@ -59,7 +59,7 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  return arr.filter(r => forbiddenValues.includes(r) === false);
+  return arr.filter(r => !forbiddenValues.includes(r));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -176,12 +176,7 @@ const characters = [
 ];
 
 const getCharactersWithoutChildren = (arr) => {
-  let newArr = [];
-  arr.filter(r => {
-    if (!r.children)
-      newArr.push(r);
-  });
-  return newArr;
+  return arr.filter(r => !r.children);
 };
 
 /* ------------------------------------------------------------------------------------------------
