@@ -167,24 +167,38 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  let checked = false;
-  arr.map(r => {
-    let test = Object.values(r);
-    let vars = Object.keys(r);
-    if (vars[2] === 'children') {
-      test.map(r => {
-        if (r === character) {
-          if (test[2]) {
-            checked = true;
-            return true;
-          }
+  // let checked = false;
+  // arr.map(r => {
+  //   let test = Object.values(r);
+  //   let vars = Object.keys(r);
+  //   if (vars[2] === 'children') {
+  //     test.map(r => {
+  //       if (r === character) {
+  //         if (test[2]) {
+  //           checked = true;
+  //         }
+  //       }
+  //     });
+  //   }
+  // });
+
+  // return checked;
+
+
+  //Different Solution
+
+  let kids = 0;
+  arr.forEach(person => {
+    if (person.name === character) {
+      Object.keys(person).forEach((key, idx) => {
+        if(key === 'children'){
+          kids = Object.values(person)[idx].length;
         }
       });
     }
   });
 
-  return checked;
-
+  return kids ? true : false;
 };
 
 /* ------------------------------------------------------------------------------------------------
