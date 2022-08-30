@@ -169,10 +169,7 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
-  let nameR = [];
-  data.map(r=>nameR.push(r.name));
-  return nameR.sort((a,b) => a.length-b.length)[1];
-  //this solution sucks because two names are the same length so my sort method puts the first shorests name it finds in front so therfore this test suckz
+  return data.sort((a,b) => parseInt(a.height)-parseInt(b.height))[0].name;
 };
 
 /* ------------------------------------------------------------------------------------------------
