@@ -21,3 +21,15 @@ To run your tests
 ### 401 Data Structures, Code Challenges
 
 - Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+
+----------
+
+Name of feature: Add change book feature
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 1400
+
+Finish time: 1500
+
+Actual time needed to complete: 1 hours
