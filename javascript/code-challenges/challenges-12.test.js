@@ -101,6 +101,8 @@ Return either true or false.
 
 const validatePhoneNumber = (phoneNumber) => {
   let regex = /^((\d{10})|(\d{3}( |-)\d{3}( |-)\d{4})||(\d{6}-\d{4})|(\d{3}(-| )\d{7})|(\(\d{3}\)(| )\d{3}( |-)\d{4}))$/gm;
+
+  //very long regex, but it works so hey
   return regex.test(phoneNumber);
 };
 
@@ -114,7 +116,6 @@ findTagNames(['<div><h1>Hello, world!</h1></div>', '<p>Welcome to my site</p>'])
 ------------------------------------------------------------------------------------------------ */
 
 const findTagNames = elements => {
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
